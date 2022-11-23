@@ -15,7 +15,8 @@ const Login = () => {
                 email: email,
                 password: password
             });
-            history.push("/dashboard");
+            console.log("toimiiko")
+            history('/Home', { replace: true});
         } catch (error) {
             if (error.response) {
                 setMsg(error.response.data.msg);

@@ -19,7 +19,8 @@ const Register = () => {
                 password: password,
                 confPassword: confPassword
             });
-            history.push("/");
+            history('/', { replace: true});
+            //navigate('/loginforuser', { replace: true});
         } catch (error) {
             if (error.response) {
                 setMsg(error.response.data.msg);
